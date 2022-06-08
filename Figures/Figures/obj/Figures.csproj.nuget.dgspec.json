@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/202016/Projects/Figures/Figures/Figures.csproj": {}
+    "C:\\MyFolders\\Programming\\C#\\Figures\\Figures\\Figures\\Figures.csproj": {}
   },
   "projects": {
-    "/Users/202016/Projects/Figures/Figures/Figures.csproj": {
+    "C:\\MyFolders\\Programming\\C#\\Figures\\Figures\\Figures\\Figures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/202016/Projects/Figures/Figures/Figures.csproj",
+        "projectUniqueName": "C:\\MyFolders\\Programming\\C#\\Figures\\Figures\\Figures\\Figures.csproj",
         "projectName": "Figures",
-        "projectPath": "/Users/202016/Projects/Figures/Figures/Figures.csproj",
-        "packagesPath": "/Users/202016/.nuget/packages/",
-        "outputPath": "/Users/202016/Projects/Figures/Figures/obj/",
+        "projectPath": "C:\\MyFolders\\Programming\\C#\\Figures\\Figures\\Figures\\Figures.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\MyFolders\\Programming\\C#\\Figures\\Figures\\Figures\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/202016/.config/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,7 +24,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -36,7 +35,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.406/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

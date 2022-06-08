@@ -1,0 +1,11 @@
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\bin\Debug\netcoreapp3.1\Figures.exe
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\bin\Debug\netcoreapp3.1\Figures.deps.json
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\bin\Debug\netcoreapp3.1\Figures.runtimeconfig.json
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\bin\Debug\netcoreapp3.1\Figures.runtimeconfig.dev.json
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\bin\Debug\netcoreapp3.1\Figures.dll
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\bin\Debug\netcoreapp3.1\Figures.pdb
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\obj\Debug\netcoreapp3.1\Figures.csprojAssemblyReference.cache
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\obj\Debug\netcoreapp3.1\Figures.AssemblyInfoInputs.cache
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\obj\Debug\netcoreapp3.1\Figures.AssemblyInfo.cs
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\obj\Debug\netcoreapp3.1\Figures.dll
+C:\MyFolders\Programming\C#\Figures\Figures\Figures\obj\Debug\netcoreapp3.1\Figures.pdb
