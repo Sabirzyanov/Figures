@@ -1,6 +1,6 @@
 ﻿namespace Figures
 {
-    public struct Point
+    public class Triangle
     {
         
     }
