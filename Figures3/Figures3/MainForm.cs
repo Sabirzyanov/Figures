@@ -1,7 +1,7 @@
 /* 
     Insaf Sabirzyanov 220P,
-    Task "Figures 3"
-    29.05.22
+    Task "Figures 4"
+    30.05.22
 */
 
 
@@ -16,10 +16,8 @@ namespace Figures3
     {
         private bool canDraw;
         string figureType;
-
         Figures figures = new Figures();
         Figure currentFigure = new Figure(0, 0); 
-        Pen p = new Pen(Color.Black, 2);
         Point startPoint;
 
         public MainForm()
@@ -34,6 +32,7 @@ namespace Figures3
         private Figure createFigure(string figureType)
         {
             Figure fig;
+
             switch (figureType)
             {
                 case "Triangle":
@@ -57,9 +56,12 @@ namespace Figures3
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
+            WinFormsDrawer drawer = new WinFormsDrawer(e.Graphics);
+
             if (figures.GetCount() != 0)
-                figures.Draw(e, p);
-            currentFigure?.Draw(e, p);
+                figures.Draw(drawer);
+            if (drawer is not null)
+                currentFigure?.Draw(drawer);
         }
 
         private void figuresList_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,7 +77,6 @@ namespace Figures3
             {
                 canDraw = false;
                 figureListLabel.Text = $"Figure: None";
-                MessageBox.Show("Dont select figure is NULL");
             }
         }
 
@@ -94,8 +95,8 @@ namespace Figures3
                     if (currentFigure is not null)
                     {
                         figures.Add(currentFigure);
+                        mainPanel.Refresh();
                     }
-                    mainPanel.Refresh();
                 }
             }
         }
@@ -109,14 +110,15 @@ namespace Figures3
                 currentFigure.basePoint = startPoint;
                 currentFigure.endPoint.X = e.X;
                 currentFigure.endPoint.Y = e.Y;
+                currentFigure.color = colorDialogWindow.Color;
+
 
                 float penWidth = 0;
+
                 if (!float.TryParse(penWidthInput.Text, out penWidth))
                     penWidth = 2f;
 
-                currentFigure.color = colorDialogWindow.Color;
-                currentFigure.penWidth = penWidth;
-                
+                currentFigure.strokeWidth = (int) penWidth;
                 debugLabel.Text = $"Figures count: {figures.GetCount()}";
                 mainPanel.Refresh();
             }
@@ -130,10 +132,6 @@ namespace Figures3
                 {
                     startPoint = new Point(e.X, e.Y);
                 }
-            }
-            else 
-            {
-                MessageBox.Show("Select figure", "ERROR");
             }
         }
 
@@ -152,14 +150,18 @@ namespace Figures3
             currentFigure = new Figure();
             if (openFileDialogWindow.ShowDialog() == DialogResult.OK)
             {
+                canDraw = false;
                 figures.Load(openFileDialogWindow.FileName);
                 mainPanel.Refresh();
+                canDraw = true;
             };
         }
 
         private void newBtn_Click(object sender, EventArgs e)
         {
             figures = new Figures();
+            currentFigure = new Figure();
+            debugLabel.Text = $"Figures count: {figures.GetCount()}";
             mainPanel.Refresh();
 
         }

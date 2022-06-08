@@ -1,7 +1,7 @@
 ﻿/* 
     Insaf Sabirzyanov 220P,
-    Task "Figures 3"
-    29.05.22
+    Task "Figures 4"
+    30.05.22
 */
 
 using System.Runtime.Serialization.Formatters.Binary;
@@ -55,11 +55,11 @@ namespace Figures3
             }
         }
 
-        public void Draw(PaintEventArgs e, Pen p)
+        public void Draw(IDrawer drawer)
         {
             foreach (Figure f in figures)
             {
-                f.Draw(e, p);
+                f.Draw(drawer);
             }
         }
 

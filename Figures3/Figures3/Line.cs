@@ -1,7 +1,7 @@
 ﻿/* 
     Insaf Sabirzyanov 220P,
-    Task "Figures 3"
-    29.05.22
+    Task "Figures 4"
+    30.05.22
 */
 
 using System;
@@ -32,11 +32,9 @@ namespace Figures3
             return $"Line A {A} - B {B}";
         }
 
-        public override void Draw(PaintEventArgs e, Pen p)
+        public override void Draw(IDrawer drawer)
         {
-            p.Color = color;
-            p.Width = penWidth;
-            e.Graphics.DrawLine(p, A.X, A.Y, B.X, B.Y);
+            drawer.DrawLine(this);
         }
 
     }

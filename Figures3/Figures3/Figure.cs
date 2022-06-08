@@ -1,7 +1,7 @@
 ﻿/* 
     Insaf Sabirzyanov 220P,
-    Task "Figures 3"
-    29.05.22
+    Task "Figures 4"
+    30.05.22
 */
 
 using System;
@@ -15,7 +15,7 @@ namespace Figures3
         public Point basePoint;
         public Point endPoint;
         public Color color;
-        public float penWidth;
+        public int strokeWidth;
 
         public Figure(Point point)
         {
@@ -28,7 +28,7 @@ namespace Figures3
         }
 
 
-        public virtual void Draw(PaintEventArgs e, Pen p)
+        public virtual void Draw(IDrawer drawer)
         {
             
         }

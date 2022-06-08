@@ -1,7 +1,7 @@
 ﻿/* 
     Insaf Sabirzyanov 220P,
-    Task "Figures 3"
-    29.05.22
+    Task "Figures 4"
+    30.05.22
 */
 
 
@@ -18,12 +18,9 @@ namespace Figures3
             Radius = radius;
         }
 
-        public override void Draw(PaintEventArgs e, Pen p)
+        public override void Draw(IDrawer drawer)
         {
-            p.Color = color;
-            p.Width = penWidth;
-            float radius = (float) Math.Sqrt(Math.Pow((endPoint.X - basePoint.X), 2) + Math.Pow((endPoint.Y - basePoint.Y), 2));
-            e.Graphics.DrawEllipse(p, basePoint.X - radius, basePoint.Y - radius, radius * 2, radius * 2);
+            drawer.DrawCircle(this);
         }
     }
 }

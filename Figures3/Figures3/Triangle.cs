@@ -1,7 +1,7 @@
 ﻿/* 
     Insaf Sabirzyanov 220P,
-    Task "Figures 3"
-    29.05.22
+    Task "Figures 4"
+    30.05.22
 */
 
 
@@ -31,15 +31,9 @@ namespace Figures3
             C = new Point(x3, y3);
         }
 
-        public override void Draw(PaintEventArgs e, Pen p)
+        public override void Draw(IDrawer drawer)
         {
-            p.Color = color;
-            p.Width = penWidth;
-            e.Graphics.DrawPolygon(p, new System.Drawing.Point[] {
-                new System.Drawing.Point(basePoint.X, basePoint.Y),
-                new System.Drawing.Point((endPoint.X + basePoint.X) / 2, endPoint.Y),
-                new System.Drawing.Point(endPoint.X, basePoint.Y),
-            });
+            drawer.DrawTriangle(this);
         }
     }
 }

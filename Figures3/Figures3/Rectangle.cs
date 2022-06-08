@@ -1,7 +1,7 @@
 ﻿/* 
     Insaf Sabirzyanov 220P,
-    Task "Figures 3"
-    29.05.22
+    Task "Figures 4"
+    30.05.22
 */
 
 
@@ -20,16 +20,9 @@ namespace Figures3
             Width = width;
         }
 
-        public override void Draw(PaintEventArgs e, Pen p)
+        public override void Draw(IDrawer drawer)
         {
-            p.Color = color;
-            p.Width = penWidth;
-            e.Graphics.DrawRectangle(p, System.Drawing.Rectangle.FromLTRB(
-                Math.Min(basePoint.X, endPoint.X),
-                Math.Min(basePoint.Y, endPoint.Y),
-                Math.Max(basePoint.X, endPoint.X),
-                Math.Max(basePoint.Y, endPoint.Y)
-            ));
+            drawer.DrawRectangle(this);
         }
     }
 }
